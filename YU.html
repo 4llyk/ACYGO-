@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu-Gi-Oh! Cards Carousel</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="GI.css"> <!-- Importando o arquivo CSS atualizado -->
+</head>
+<body>
+
+    <!-- Barra de Pesquisa -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Pesquisar cartas pelo nome...">
+    </div>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <img id="cardImage" src="" alt="Carta Yu-Gi-Oh" class="active">
+        </div>
+        <div class="carousel-info">
+            <h2 id="cardName">Nome da Carta</h2>
+            <p id="cardDesc">Descrição da Carta</p>
+            <button id="readMoreBtn">Ler mais</button> <!-- Botão "Ler mais" -->
+            <p><strong>Atributo:</strong> <span id="cardAttribute"></span></p>
+            <p><strong>Tipo:</strong> <span id="cardType"></span></p>
+            <p><strong>Nível:</strong> <span id="cardLevel"></span></p>
+        </div>
+    </div>
+
+    <!-- Controles de Paginação -->
+    <div class="pagination">
+        <button id="prevPageBtn" class="pagination-btn">Anterior</button>
+        <span id="pageInfo"></span>
+        <button id="nextPageBtn" class="pagination-btn">Próximo</button>
+    </div>
+
+    <script src="OH!.js"></script> <!-- Importando o arquivo JavaScript -->
+</body>
+</html>

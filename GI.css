@@ -1,0 +1,153 @@
+/* Estilos gerais e minimalistas com toques modernos */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1E1E1E;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.search-container {
+    margin-bottom: 20px; /* Espaçamento abaixo da barra de pesquisa */
+}
+
+#searchInput {
+    width: 300px; /* Largura da barra de pesquisa */
+    padding: 10px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    background-color: #444; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+#searchInput::placeholder {
+    color: #bbb; /* Cor do texto do placeholder */
+}
+
+/* Estilos para o restante da página */
+.carousel-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 900px;
+    background-color: #292929;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.carousel {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    max-height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.5s ease, box-shadow 0.5s ease; /* Suavizando a transição */
+}
+
+.carousel-info {
+    flex: 1;
+    text-align: left;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #212121;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Suave transição de fade */
+    max-height: 300px; /* Limitar altura para evitar quebra de layout */
+    overflow: hidden; /* Ocultar conteúdo que excede a altura */
+}
+
+.fade-in {
+    opacity: 1; /* Aplica a transição suave na exibição */
+}
+
+/* Estilos para o botão "Ler mais" */
+#readMoreBtn {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: none; /* Esconde o botão inicialmente */
+}
+
+#readMoreBtn:hover {
+    background-color: #666;
+}
+
+/* Estilos para os botões de paginação */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination-btn {
+    background-color: #444;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-btn:hover {
+    background-color: #666;
+}
+
+#pageInfo {
+    font-size: 1.1em;
+    color: #CFCFCF;
+}
+
+/* Efeitos adicionais para dispositivos móveis */
+@media (max-width: 768px) {
+    .carousel-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .carousel-info {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .carousel-info h2 {
+        font-size: 1.5em;
+    }
+
+    .carousel-info p {
+        font-size: 1em;
+    }
+
+    .carousel img {
+        max-width: 300px;
+        max-height: 400px;
+    }
+}
